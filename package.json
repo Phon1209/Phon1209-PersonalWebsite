@@ -9,6 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.17.1"
+    "astro": "^5.17.1",
+    "pagefind": "^1.4.0",
+    "remark-wiki-link": "^2.0.1"
   }
 }
