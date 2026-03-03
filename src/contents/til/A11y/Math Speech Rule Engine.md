@@ -1,3 +1,0 @@
-Ever since I learned that we should use `<math>` tag or `role="math"` to signify the screen reader that the element is a math object, I was left wondering whether we need to actually write the `aria-label` ourselves to make it accessible. Fortunately, in `mathml` they uses the Speech Rule Engine or SRE to read the $\LaTeX$ formula and convert them into simple language.
-
-However, unfortunately for me, it’s not available to Thai yet. Maybe since I get benefit from this, I may contribute the translation when I have time to spare.

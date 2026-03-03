@@ -1,3 +1,0 @@
-After building the static page, Pagefind will crawl the dist output and create multiple index binary files. The format can be read in their GitHub repository, but the point is that the index is fragmented, which mean the search functionality will only download the index file that they need; thus low-bandwidth.
-
-Whenever use search something, it will refer to these downloaded files, and point to the predefined path without eating the bandwidth.

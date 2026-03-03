@@ -1,0 +1,44 @@
+---
+export const prerender = true;
+import { getCollection, getEntry } from "astro:content";
+
+export async function getStaticPaths() {
+  const til = await getCollection("til");
+  return til.map(til => {
+    return {
+      params: {
+        slug: til.id,
+      },
+      props: til,
+    }
+});
+}
+
+const { slug } = Astro.params;
+
+if (slug === undefined) {
+  throw new Error("slug is undefined");
+}
+
+const post = await getEntry("til", slug);
+
+if (post === undefined) {
+  return Astro.redirect("/404");
+}
+
+// console.log(post);
+// const { Content, headings } = await post.render();
+const rendered = post.rendered.html;
+const title = post.data.properties.Name
+const created = post.data.properties.created.created_time
+console.log(rendered)
+console.log(created);
+---
+
+<meta charset="UTF-8" />
+<meta lang="th-TH" />
+<h1> {title} </h1>
+<p>Created: {new Date(created).toLocaleDateString()}</p>
+<div set:html={rendered} />
+
+

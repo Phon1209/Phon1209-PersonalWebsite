@@ -1,0 +1,16 @@
+---
+export const prerender = true;
+import { getCollection } from "astro:content";
+
+const tils = await getCollection("til");
+
+---
+
+
+<ul>
+  {
+    tils.map(til => {
+return <a href=`til/${til.id}`><li>{til.id} {til.data.properties.Name}</li></a>
+  })
+  }
+</ul>
