@@ -4,6 +4,9 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   image: {
-    remotePatterns: [{ protocol: "https", hostname: "**.amazonaws.com" }],
+    remotePatterns: [
+      { protocol: "https", hostname: "**.amazonaws.com" },
+      { protocol: "https", hostname: "*.amazonaws.com" },
+    ],
   },
 });
