@@ -1,0 +1,3 @@
+UTF-8 means the data stored is the the minimum 8 bits(1 byte). But the actual data could be between 1 to 4 bytes depending what character to store.
+
+The process of storing data is that character is check on the unicode list then UTF-8 choose how the machine store the data, it will choose how many bytes. When read, we also need utf-8 to read the specific format of the data and send to unicode to decode the character.

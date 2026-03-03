@@ -1,0 +1,1 @@
+It seems that the graph view of the note in obsidian only come from the link between pages. But instead of treating it as a directed edge, they make it undirected and use it for backlink.
